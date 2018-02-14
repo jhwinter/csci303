@@ -84,3 +84,5 @@ fabric.properties
 
 ### Local .gitignore ###
 course_materials/
+.idea/
+csci303sp18/.idea/
