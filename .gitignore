@@ -83,5 +83,4 @@ fabric.properties
 
 
 ### Local .gitignore ###
-# pdf's
-*.pdf
+course_materials/
