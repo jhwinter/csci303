@@ -1,0 +1,12 @@
+/* ELEMENT SELECTORS */
+a:link {color: cyan;}
+a:visited {color: green;}
+
+/* CLASS SELECTORS */
+.error {color: #ff0000; padding: 3px;}
+.success {color: #1c891b; padding: 3px;}
+
+/* PSEUDO-CLASS SELECTORS */
+
+/* CONTEXTUAL SELECTORS */
+

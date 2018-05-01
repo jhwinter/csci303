@@ -16,12 +16,3 @@ nav li {
     display: inline;
     padding: 5px;
 }
-
-.error {
-    color: red;
-}
-
-.success {
-    color: green;
-}
-

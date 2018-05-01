@@ -6,6 +6,7 @@
  * Time: 11:28
  */
 
+require_once "connect.inc.php";
 //turn on error reporting for debugging - page 699
 error_reporting(E_ALL);
 ini_set('display_errors', '1');

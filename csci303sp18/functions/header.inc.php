@@ -16,11 +16,6 @@ date_default_timezone_set('America/New_York');
 
 //set current time
 $rightnow = time();
-
-//current file name
-$currentfile = basename($_SERVER['PHP_SELF']);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

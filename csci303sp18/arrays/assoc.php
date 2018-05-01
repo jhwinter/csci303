@@ -5,8 +5,7 @@
  * Date: 18/02/13
  * Time: 11:44
  */
-?>
-<?php
+
 $nonsense = array("bananas" => 7, "sidewalks" => 11, "flowers" => 2, "dirt" => 187, "bleh" => 233);
 echo "print_r: ";
 print_r($nonsense);

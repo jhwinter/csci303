@@ -21,10 +21,10 @@ require_once "header.inc.php";
                     <th><label for="where">Country:</label></th>
                     <td>
                         <select name="where" id="where">
-                            <option>Choose a country</option>
-                            <option>Canada</option>
-                            <option>Finland</option>
-                            <option>United States</option>
+                            <option value="">Choose a country</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Finland">Finland</option>
+                            <option value="US">United States</option>
                         </select>
                     </td>
                 </tr>
@@ -47,11 +47,11 @@ require_once "header.inc.php";
                 <tr>
                     <th><label>Radio a, b, c:</label></th>
                     <td>
-                        <input type="radio" name="radio" id="radioa" />
+                        <input type="radio" name="radio" id="radioa" value="radioa" />
                         <label for="radioa">a</label>
-                        <input type="radio" name="radio" id="radiob" />
+                        <input type="radio" name="radio" id="radiob" value="radiob" />
                         <label for="radiob">b</label>
-                        <input type="radio" name="radio" id="radioc" />
+                        <input type="radio" name="radio" id="radioc" value="radioc" />
                         <label for="radioc">c</label>
                     </td>
                 </tr>
@@ -62,7 +62,7 @@ require_once "header.inc.php";
                 <tr>
                     <th><label for="submit">Submit:</label></th>
                     <td>
-                        <input type="hidden"  name="hid" id="hid" />
+                        <input type="hidden"  name="hid" id="hid" value="banana" />
                         <input type="submit" name="submit" id="submit" />
                     </td>
                 </tr>
