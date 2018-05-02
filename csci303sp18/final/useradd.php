@@ -8,6 +8,7 @@
 
 $pagename = "User Registration";
 require_once "header.inc.php";
+require_once "userfunctions.php";
 
 //SET INITIAL VARIABLES
 $showform = True;
