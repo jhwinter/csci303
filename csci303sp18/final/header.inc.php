@@ -28,7 +28,7 @@ if (isset($_SESSION['username'])){$username = $_SESSION['username'];}
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Jonathan Winters</title>
+        <title>Jonathan Winter</title>
         <link rel="stylesheet" href="styles.css"/>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
