@@ -10,7 +10,7 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'>
-        <title>Jonathan Winters</title>
+        <title>Jonathan Winter</title>
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
