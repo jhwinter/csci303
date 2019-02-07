@@ -26,7 +26,7 @@ $currentfile = basename($_SERVER['PHP_SELF']);
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Jonathan Winters</title>
+        <title>Jonathan Winter</title>
         <link rel="stylesheet" href="styles.css"/>
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=5o7mj88vhvtv3r2c5v5qo4htc088gcb5l913qx5wlrtjn81y"></script>
         <script>tinymce.init({ selector:'textarea' });</script>
