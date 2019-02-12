@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	if (isEmptyField($formdata['details'])) {$iserror = True; $errdetails = 'Details are required.';}
 
 	// check for duplicate usernames/emails
-	if (isDuplicate($pdo, 'jtwintersContent', 'title', $formdata['title']) && (isEmptyField($formdata['title'] == False)))
+	if (isDuplicate($pdo, 'jhwinterContent', 'title', $formdata['title']) && (isEmptyField($formdata['title'] == False)))
 	{
 		$iserror = True;
 		$errtitle = 'Title already exists.';
