@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 	if (isMatchingField($formdata['title'], $formdata['origtitle']) == False)
 	{
-		if (isDuplicate($pdo, 'jtwintersContent', 'title', $formdata['title']))
+		if (isDuplicate($pdo, 'jhwinterContent', 'title', $formdata['title']))
 		{
 			$iserror = True;
 			$errtitle = 'Title already exists in the database.';
