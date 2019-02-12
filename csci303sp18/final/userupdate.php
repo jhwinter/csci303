@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 	if (isMatchingField($formdata['username'], $formdata['origusername']) == False)
 	{
-		if (isDuplicate($pdo, 'jtwintersUser', 'username', $formdata['username']))
+		if (isDuplicate($pdo, 'jhwinterUser', 'username', $formdata['username']))
 		{
 			$iserror = True;
 			$errusername = 'Username already exists in the database.';
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	}
 	if (isMatchingField($formdata['email'], $formdata['origemail']) == False)
 	{
-		if (isDuplicate($pdo, 'jtwintersUser', 'email', $formdata['email']))
+		if (isDuplicate($pdo, 'jhwinterUser', 'email', $formdata['email']))
 		{
 			$iserror = True;
 			$erremail = 'Email already exists in the database.';
