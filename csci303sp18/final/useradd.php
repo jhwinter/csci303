@@ -71,12 +71,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 
 	// check for duplicate usernames/emails
-	if (isDuplicate($pdo, 'jtwintersUser', 'username', $formdata['username']))
+	if (isDuplicate($pdo, 'jhwinterUser', 'username', $formdata['username']))
 	{
 		$iserror = True;
 		$errusername = 'Username already exists.';
 	}
-	if (isDuplicate($pdo, 'jtwintersUser', 'email', $formdata['email']))
+	if (isDuplicate($pdo, 'jhwinterUser', 'email', $formdata['email']))
 	{
 		$iserror = True;
 		$erremail = 'Email already exists.';
