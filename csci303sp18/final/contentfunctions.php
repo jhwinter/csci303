@@ -43,7 +43,7 @@ function getAllContent($pdo)
 {
 	try
 	{
-		$sql = "SELECT id, title, userID FROM jtwintersContent ORDER BY title";
+		$sql = "SELECT id, title, userID FROM jhwinterContent ORDER BY title";
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute();
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -64,7 +64,7 @@ function getContent($pdo, $id)
 {
 	try
 	{
-		$sql = "SELECT * FROM jtwintersContent WHERE id = :id";
+		$sql = "SELECT * FROM jhwinterContent WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':id', $id);
 		$stmt->execute();
@@ -87,7 +87,7 @@ function getContentWithUsername($pdo, $id)
 	try
 	{
 		$sql = "SELECT C.id, C.title, C.category, C.details, C.inputDate, C.userID, U.username 
-				FROM jtwintersContent C
+				FROM jhwinterContent C
 				RIGHT JOIN jtwintersUser U ON C.userID=U.id 
 				WHERE C.id = :id";
 		$stmt = $pdo->prepare($sql);
@@ -116,7 +116,7 @@ function insertContentInDB($pdo, $formdata, $userID, $timestamp)
 {
 	try
 	{
-		$sql = "INSERT INTO jtwintersContent (title, category, details, userID, inputDate)
+		$sql = "INSERT INTO jhwinterContent (title, category, details, userID, inputDate)
 				VALUES (:title, :category, :details, :userID, :inputDate)";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':title', $formdata['title']);
@@ -141,7 +141,7 @@ function updateContentInDB($pdo, $formdata)
 {
 	try
 	{
-		$sql = "UPDATE jtwintersContent 
+		$sql = "UPDATE jhwinterContent 
 				SET title = :title, category = :category, details = :details
 				WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
@@ -166,7 +166,7 @@ function deleteContentInDB($pdo, $id)
 {
 	try
 	{
-		$sql = "DELETE FROM jtwintersContent WHERE id = :id";
+		$sql = "DELETE FROM jhwinterContent WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':id', $id);
 		return $stmt->execute();
@@ -187,7 +187,7 @@ function searchContentInDB($pdo, $searchterm)
 	try
 	{
 		$sql = "SELECT id, title 
-				FROM jtwintersContent 
+				FROM jhwinterContent 
 				WHERE (title LIKE '%$searchterm%') OR 
 				(details LIKE '%$searchterm%') OR 
 				(category LIKE '%$searchterm%') 
