@@ -16,7 +16,7 @@ function getAllUsers($pdo)
 {
 	try
 	{
-		$sql = "SELECT id, username FROM jtwintersUser ORDER BY username";
+		$sql = "SELECT id, username FROM jhwinterUser ORDER BY username";
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute();
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -37,7 +37,7 @@ function getUser($pdo, $id)
 {
 	try
 	{
-		$sql = "SELECT * FROM jtwintersUser WHERE id = :id";
+		$sql = "SELECT * FROM jhwinterUser WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':id', $id);
 		$stmt->execute();
@@ -64,7 +64,7 @@ function verifyUser($pdo, $username, $password)
 {
 	try
 	{
-		$sql = "SELECT id, username FROM jtwintersUser WHERE username = :username";
+		$sql = "SELECT id, username FROM jhwinterUser WHERE username = :username";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':username', $username);
 		$stmt->execute();
@@ -117,7 +117,7 @@ function verifyPassword($pdo, $password, $username)
 {
 	try
 	{
-		$sql = "SELECT password FROM jtwintersUser WHERE username = :username";
+		$sql = "SELECT password FROM jhwinterUser WHERE username = :username";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':username', $username);
 		$stmt->execute();
@@ -151,7 +151,7 @@ function insertUserIntoDB($pdo, $formdata, $hashedpassword, $timestamp)
 {
 	try
 	{
-		$sql = "INSERT INTO jtwintersUser (username, email, password, bio, inputDate)
+		$sql = "INSERT INTO jhwinterUser (username, email, password, bio, inputDate)
 				VALUES (:username, :email, :password, :bio, :inputDate)";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':username', $formdata['username']);
@@ -176,7 +176,7 @@ function updateUserInDB($pdo, $formdata)
 {
 	try
 	{
-		$sql = "UPDATE jtwintersUser 
+		$sql = "UPDATE jhwinterUser 
 				SET username = :username, email = :email, bio = :bio
 				WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
@@ -202,7 +202,7 @@ function updateUserPasswordInDB($pdo, $formdata)
 	try
 	{
 		$password = hashPassword($formdata['password']);
-		$sql = "UPDATE jtwintersUser 
+		$sql = "UPDATE jhwinterUser 
 				SET password = :password
 				WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
